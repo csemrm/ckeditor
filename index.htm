@@ -8,7 +8,7 @@
 
         <style>
 
-            
+
             *[contenteditable="true"]
             {
                 padding: 10px;
@@ -83,7 +83,7 @@ href="http://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;br&gt;
 
                 // When an upload starts
                 editor.on('simpleuploads.startUpload', function(e) {
-                   
+
                     log("Uploading " + e.data.name + ", please wait...");
                 });
 
@@ -104,6 +104,9 @@ href="http://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;br&gt;
 
                     // remove dimension attributes added in v 3.3.2
                     element.removeAttribute("width");
+                    if (element.hasAttribute('href')) {
+                        element.remove();
+                    }
                     element.removeAttribute("height");
                 });
 

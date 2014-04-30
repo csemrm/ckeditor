@@ -352,7 +352,7 @@ function PickAndSendFile(editor, forImage, caller, callback) {
 			}
 			element.setAttribute(attribute, fileUrl);
 			element.data( "cke-saved-" + attribute, fileUrl);
-			//editor.insertElement(element);
+			editor.insertElement(element);
 
 			if (filePickerForceLink)
 				filePickerEditor.fire("simpleuploads.finishedUpload", { name: IEUpload_fileName, element: element } );
